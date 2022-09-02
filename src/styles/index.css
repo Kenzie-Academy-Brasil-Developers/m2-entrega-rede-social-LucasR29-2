@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root{
+    --header-color: #212529;
+    --follow-button: #4263EB;
+    --like-color: #D7443E;
+    --noLike-color: rgba(33, 37, 41, 0.5);
+    --description-color: #495057;
+    --button-color: #DEE2E6;
+    --background-gray: #DEE2E6;
+    --blue-light: #4263EB;
+    --blue-strogn: #364FC7;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+ul{
+    list-style: none;
+
+}
+
+textarea,input{
+    box-sizing: border-box;
+    border: 1px solid var(--background-gray);
+    resize: none;
+    border-radius: 7px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+textarea:focus, input:focus{
+    outline:2px solid var(--blue-strogn);
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header{
+    background-color: var(--header-color);
+    height: 6vh;
+    color: white;
+}
+
+header section{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button{
+    padding: 8px;
+    background: none;
+    color: white;
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 90vw;
+    margin-top: 70px;
+    margin: 70px auto;
+    justify-content: space-between;
+}
+
+.main-info{
+    width: 60vw;
+    max-width: 900px;
+}
+
+.main-info section{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    margin-bottom: 30px;
+}
+
+.profile-info{
+    display: flex;
+    gap: 20px;
+}
+
+.profile-info__all{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-info__name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+.profile-info__button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-info__button button{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-radius: 7px;
+    background-color: var(--button-color);
+}
+
+.post-list{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+.post-list__element{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.post-list__element__info{
+    display: flex;
+    gap: 20px;
+}
+
+.post-list__element__content p{
+    margin-bottom: 20px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.post-list__element__content strong{
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.post-list__element__button{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.post-list__element__button div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heart{
+    background-image: url(../assets/heartRed.png);
+    height: 30px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: 0px 5px;
+}
+
+.open{
+    background-color: var(--header-color);
+    color: white;
+    padding: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+aside{
+    width: 20vw;
+    height: 100vh;
+}
+
+aside ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+aside ul li div{
+    align-items: center;
+}
+
+aside button{
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.main-info__aside{
+    margin-right: 30px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 	
+    
+    <link rel="stylesheet" href="./src/styles/cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>TechPosters</h1>
+            <div>
+                <button>Login</button>
+                <button>Registro</button>
+            </div>
+        </section>
+    </header>
+    <div class="modal   hide" id="modalLogin">
+        <div class="modal-div">
+            <form action="" >
+                <h2>Login</h2>
+                <input type="text" placeholder="Seu e-mail" id="emailLogin">
+                <input type="text" placeholder="Sua senha" id="passwordLogin">
+                <button type="submit" id="logar">Logar</button>
+            </form>
+            <span>Ainda não possui cadastro</span>
+            <button class="button-redirect" id="buttonLogin">Ir para página de registro</button>
+        </div>
+    </div>
+
+
+    <div class="modal" id="modalCadastro" >
+        <div class="modal-div">
+            <form action="" >
+                <div>
+                    <h2>Cadastro</h2>
+                    <button id="back" type="submit">Voltar</button>
+                </div>
+                <input type="text" placeholder="Seu nome" id="nameCadastro">
+                <input type="text" placeholder="Seu e-mail" id="emailCadastro">
+                <input type="text" placeholder="Sua senha" id="passwordCadastro">
+                <input type="text" placeholder="Qual o seu trabalho?" id="jobCadastro">
+                <input type="text" placeholder="URL da imagem de perfil" id="urlCadastro">
+                <button type="submit" id="buttonRegister">Registrar</button>
+            </form>
+            <span>Já possui login?</span>
+            <button class="button-redirect" id="buttonCadastro">Ir para página de Login</button>
+        </div>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/scripts/requisition.js"></script>
+    <script src="./src/scripts/modal.js"></script>
+    <script type="module" src="./src/scripts/modalFunction.js"></script>
+</body>
+</html>

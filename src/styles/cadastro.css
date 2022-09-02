@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --header-color: #212529;
+    --follow-button: #4263EB;
+    --like-color: #D7443E;
+    --noLike-color: rgba(33, 37, 41, 0.5);
+    --description-color: #495057;
+    --button-color: #DEE2E6;
+    --background-gray: #DEE2E6;
+    --blue-light: #4263EB;
+    --blue-strogn: #364FC7;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--background-gray);
+    height: 100vh;
+    width: 100vw;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header{
+    background-color: var(--header-color);
+    height: 6vh;
+    color: white;
+}
+
+header section{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header button{
+    padding: 8px;
+    background: none;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    gap: 15px;
+}
+
+form div{
+    display: flex;
+    justify-content: space-between;
+}
+
+form div button{
+    background: none;
+    color: black;
+    border: 1px solid var(--header-color);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 600;
+}
+
+form input{
+    box-sizing: border-box;
+    height: 48px;
+    padding: 10px;
+    border: 1px solid var(--button-color);
+    border-radius: 4px;
+}
+
+form input:focus{
+    outline-color: var(--blue-light);
+}
+
+form button{
+    height: 32px;
+    background-color: var(--blue-light);
+    color: white;
+    border-radius: 4px;
+}
+
+.modal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-div{
+    position: absolute;
+    top: 15vh;
+    z-index: 1000;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 7px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.modal-div span{
+    font-size: 12px;
+    color: black;
+}
+
+.button-redirect{
+    width: 100%;
+    height: 32px;
+    background: none;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid var(--header-color);
+}
+
+.hide{
+    display: none;
+}
+
