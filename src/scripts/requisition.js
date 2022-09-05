@@ -81,7 +81,7 @@ class Api{
             },
             body:JSON.stringify(data)
         })
-        .then(res => res.json())
+        .then(res => window.location.reload())
     }
 }
 
