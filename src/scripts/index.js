@@ -1,4 +1,7 @@
 import { Api } from "./requisition.js"
+import axios from 'axios'
+
+Vue.use(axios)
 
 if(localStorage.getItem('userID') == undefined || localStorage.getItem('userToken') == undefined){
     window.location.replace('./cadastro.html')
