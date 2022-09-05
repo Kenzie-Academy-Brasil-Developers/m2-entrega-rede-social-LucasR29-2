@@ -1,5 +1,10 @@
 import { Api } from "./requisition.js"
 
+if(localStorage.getItem('userID') == undefined || localStorage.getItem('userToken') == undefined){
+    window.location.replace('./cadastro.html')
+}
+
+
 const postList = document.querySelector(".post-list")
 const logout = document.getElementById('logout')
 const modalClose = document.getElementById('close')
