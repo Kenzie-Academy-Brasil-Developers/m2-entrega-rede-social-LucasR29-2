@@ -57,12 +57,13 @@ form{
     gap: 15px;
 }
 
-form div{
+.modalHeader{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-form div button{
+.modalHeader button{
     background: none;
     color: black;
     border: 1px solid var(--header-color);
@@ -132,7 +133,25 @@ form button{
     border: 1px solid var(--header-color);
 }
 
-.hide{
-    display: none;
+.modalFooter{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
 }
 
+.hide{
+    display: none;
+    opacity: 0;
+    animation: teste 0.3s;
+}
+
+@keyframes teste{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

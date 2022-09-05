@@ -2,7 +2,7 @@
 
 
 :root{
-    --header-color: #212529;
+    --header-color: #212529f0;
     --follow-button: #4263EB;
     --like-color: #D7443E;
     --noLike-color: rgba(33, 37, 41, 0.5);
@@ -50,9 +50,12 @@ button:hover{
 }
 
 header{
+    position: fixed;
+    top: 0;
     background-color: var(--header-color);
     height: 6vh;
     color: white;
+    width: 100%;
 }
 
 header section{
@@ -72,11 +75,10 @@ header button{
 
 main{
     display: flex;
-    height: 100vh;
     width: 90vw;
-    margin-top: 70px;
-    margin: 70px auto;
+    margin: calc(6vh + 70px) auto;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .main-info{
@@ -142,10 +144,24 @@ main{
     gap: 20px;
 }
 
+.post-list__element__info img{
+    height: 50px;
+    width: 50px;
+    border-radius: 60%;
+}
+
 .post-list__element__content p{
     margin-bottom: 20px;
     line-height: 28px;
     font-size: 16px;
+}
+
+.content-card{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical; 
 }
 
 .post-list__element__content strong{
@@ -166,12 +182,16 @@ main{
 }
 
 .heart{
-    background-image: url(../assets/heartRed.png);
+    background-image: url(../assets/heartBlack.png);
     height: 30px;
     width: 25px;
     background-repeat: no-repeat;
     background-color: white;
     background-position: 0px 5px;
+}
+
+.heart-red{
+    background-image: url(../assets/heartRed.png);
 }
 
 .open{
@@ -183,8 +203,25 @@ main{
 }
 
 aside{
-    width: 20vw;
+    width: 27vw;
     height: 100vh;
+    position: fixed;
+    right: 50px;
+}
+
+aside p{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+aside span{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.container__aside__element{
+    display: flex;
+    gap: 20px;
 }
 
 aside ul{
@@ -192,10 +229,12 @@ aside ul{
     flex-direction: column;
     gap: 30px;
     margin-top: 40px;
+    overflow-x: auto;
 }
 
 aside ul li div{
     align-items: center;
+    justify-content: space-between;
 }
 
 aside button{
@@ -204,6 +243,49 @@ aside button{
     padding-right: 10px;
 }
 
+.buttonFollow{
+    background-color: #4263EB;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.buttonNoFollow{
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid #1E1E1E;
+    color: #1E1E1E;
+}
+
 .main-info__aside{
     margin-right: 30px;
+}
+
+.section-list{
+    width: 60vw;
+}
+
+@media(max-width: 1200px){
+    .main-info{
+        width: 90vw;
+        max-width: none;
+    }
+
+    aside{
+        position: static;
+        width: 100%;
+        height: 15vh;
+    }
+    aside ul{
+        flex-direction: row;
+        overflow-x: scroll;
+    }
+    aside img{
+    }
+    .section-list{
+        width: 100vw;
+        margin-top: 70px;
+    }
 }

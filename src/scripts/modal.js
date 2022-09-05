@@ -1,23 +1,35 @@
+const cadastro = document.querySelectorAll('.cadastro')
+const login = document.querySelectorAll('.loginApagar')
 const buttonLogin = document.getElementById('buttonLogin')
-const buttonRegister = document.getElementById('buttonCadastro')
-const modalLogin = document.getElementById('modalLogin')
-const modalCadastro = document.getElementById('modalCadastro')
-const voltar = document.getElementById('back')
+const buttonCadastro = document.getElementById('buttonCadastro')
+const buttonVoltar = document.getElementById('back')
 
 buttonLogin.addEventListener('click', (event) => {
-    modalLogin.classList.toggle('hide')
-    modalCadastro.classList.toggle('hide')
+    login.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    cadastro.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    buttonVoltar.classList.toggle('hide')
 })
 
 buttonCadastro.addEventListener('click', (event) => {
-    modalLogin.classList.toggle('hide')
-    modalCadastro.classList.toggle('hide')
+    login.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    cadastro.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    buttonVoltar.classList.toggle('hide')
 })
 
-voltar.addEventListener('click', (event) => {
-    event.preventDefault()
-    modalLogin.classList.toggle('hide')
-    modalCadastro.classList.toggle('hide')
+buttonVoltar.addEventListener('click', (event) => {
+    login.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    cadastro.forEach(x => {
+        x.classList.toggle('hide')
+    })
+    buttonVoltar.classList.toggle('hide')
 })
-
-

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles/index.css">
+    <link rel="stylesheet" href="./src/styles/modal_dashboard.css">
     <title>Rede Social</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <section>
             <h1>TechPosters</h1>
             <div>
-                <button>Sair</button>
+                <button id="logout">Sair</button>
             </div>
         </section>
     </header>
@@ -29,229 +30,54 @@
                         <span>Front end Engineer</span>
                     </div>
                 </div>
-                <input type="text" placeholder="Digitar título do post">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Digitar descrição do post"></textarea>
+                <input type="text" placeholder="Digitar título do post" id="textTitle">
+                <textarea name="" id="textPost" cols="30" rows="10" placeholder="Digitar descrição do post"></textarea>
                 <div class="profile-info__button">
-                    <button>Postar</button>
+                    <button id="post">Postar</button>
                 </div>
             </section>
-            <h2>Posts</h2>
-
-
-            <ul class="post-list">
-
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="post-list__element">
-
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="profile-info__all">
-                            <h2>Samuel Leão</h2>
-                            <span>Front end Engineer</span>
-                        </div>
-                    </div>
-
-                    <div class="post-list__element__content">
-                        <p><strong>Como criar um interface simples e agradável utilizando boas práticas de design </strong></p>
-                        <p>Hoje vamos conversar sobre como criar uma interface agradável mesmo sem ter um design pronto feito por um profissional de UI design.</p>
-                    </div>
-
-                    <div class="post-list__element__button">
-                        <button class="open">Abrir Post</button>
-                        <div>
-                            <button class="heart"></button>
-                            <span>25</span>
-                        </div>
-                    </div>
-
-                </li>
-            </ul>
         </section>
         <aside>
             <h3>Sugestões para você seguir</h3>
-            <ul>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                <li>
-                    <div class="post-list__element__info">
-                        <img src="./src/assets/Ellipse 1.png" alt="">
-                        <div class="main-info__aside">
-                            <p>Carlos Lima</p>
-                            <span>UX e UI Desgineer</span>
-                        </div>
-                        <button>Seguindo</button>
-                    </div>        
-                </li>
-                
+            <ul id="sugestionsList">
+               
             </ul>
         </aside>
+        <section class="section-list">
+            <h2>Posts</h2>
+            <ul class="post-list">
+            </ul>
+        </section>
     </main>
+    <div class="modal_background" id="modal_background">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-user-info">
+                    <img src="./src/assets/Ellipse 1.png" alt="">
+                    <div>
+                        <h2 id="username">
+                            Samuel Pershuhn
+                        </h2>
+                        <span id="work">
+                            Front end Engineer
+                        </span>
+                    </div>
+                </div>
+                <button id="close"></button>
+            </div>
+            <div class="modal-body">
+                <p id="title"><strong>Empresa de Tecnologia da Informação abre vagas para programa de estágio</strong></p>
+                <p id="content">A Generic Digital, empresa natalence especializada em Tecnologia da Informação, irá iniciar o seu sexto programa de estágio, com o prazo de inscrições entre os dias 10 e 28 de agosto. 
+
+                    O programa é conhecido como Generic Wars, com inspiração nos filmes Star Wars. Nas histórias, os iniciantes fazem treinamentos para se tornar cavaleiros Jedi, que compõem o lado bom da força.
+                    
+                    A empresa explica que este princípio também é aplicado na empresa, em que a ideia é desenvolver talentos na área de tecnologia que vão aprender, desde cedo, a colocar a mão na massa, atuando diretamente com clientes nacionais e internacionais.</p>
+            </div>
+        </div>
+    </div>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script type="module" src="./src/scripts/requisition.js"></script>
+    <script type='module' src="./src/scripts/index.js"></script>
+    <script type='module' src="./src/scripts/aside.js"></script>
 </body>
 </html>

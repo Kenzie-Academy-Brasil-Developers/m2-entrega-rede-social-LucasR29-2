@@ -1,8 +1,6 @@
 import { Api } from "./requisition.js"
 
 const username = document.getElementById('nameCadastro')
-const emailCadastro = document.getElementById('emailCadastro')
-const passwordCadastro = document.getElementById('passwordCadastro')
 const work = document.getElementById('jobCadastro')
 const img = document.getElementById('urlCadastro')
 const register = document.getElementById('buttonRegister')
@@ -14,26 +12,35 @@ const login = document.getElementById('logar')
 
 
 
-async function create(username,email,password,work,image){
-    return await Api.createUser(username,email,password,work,image)
+async function create(data){
+    return await Api.createUser(data)
 
 }  
 
-login.addEventListener('click', (event) => {
+async function userLogin(data){
+    return await Api.userLogin(data)
+}
+
+login.addEventListener('click', async (event) => {
     event.preventDefault()
+    const data = {
+        email: emailLogin.value,
+        password: passwordLogin.value
+    }
+    console.log(data)
+    const res = await userLogin(data)
+    window.location.replace('../../index.html')
 })
 
 register.addEventListener('click', async (event) => {
     event.preventDefault()
     const data = {
         username: username.value,
-        email:emailCadastro.value,
-        password:passwordCadastro.value,
+        email: emailLogin.value,
+        password:passwordLogin.value,
         work_at:work.value,
-        image:  img.value
+        image: img.value
     }
     console.log(data)
-
-    const res = await create(JSON.stringify(data))
-    console.log(await res)
+    const res = await create(data)
 })
