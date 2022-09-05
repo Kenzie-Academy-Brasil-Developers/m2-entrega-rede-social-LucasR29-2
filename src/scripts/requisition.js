@@ -1,7 +1,7 @@
 export const token = localStorage.getItem('userToken')
 
 
-const api = axios.create({
+const instance = axios.create({
     baseURL:'https://m2-rede-social.herokuapp.com/api',
     timeout: 60000,
     headers: {
@@ -30,7 +30,7 @@ class Api{
     }
 
     static async userLogin(data){
-        return await api.post('/users/login/', data)
+        return await instance.post('/users/login/', data)
         .then(res => {
             localStorage.setItem('userToken', res.data.token)
             localStorage.setItem('userID', res.data.user_uuid)
@@ -39,36 +39,36 @@ class Api{
     }
 
     static async searchUser(userID){
-        return await api.get(`/users/${userID}/`)
+        return await instance.get(`/users/${userID}/`)
             .then(res => console.log(res.data))
     }
 
     static async getPosts(){
-        const data = api.get('/posts/')
+        const data = instance.get('/posts/')
         return data
     }
 
     static async likePost(data){
-        return await api.post('/likes/', data)
+        return await instance.post('/likes/', data)
         .catch(err => console.log(err))
     }
 
     static async dislikePost(data){
-        return await api.delete(`/likes/${data}/`)
+        return await instance.delete(`/likes/${data}/`)
         .catch(err => console.log(err))
     }
 
     static async getUsers(page){
-        return await api.get(`/users/?page={${page}}`)
+        return await instance.get(`/users/?page={${page}}`)
     }
 
     static async follow(data){
-        return await api.post('/users/follow/', data)
+        return await instance.post('/users/follow/', data)
         .then(res => res.data)
     }
 
     static async unfollow(data){
-        return await api.delete(`users/unfollow/${data}/`)
+        return await instance.delete(`users/unfollow/${data}/`)
         .catch(err => console.log(err))
     }
 
